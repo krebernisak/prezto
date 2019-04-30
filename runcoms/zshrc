@@ -11,3 +11,22 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Init jenv
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_17.jdk/Contents/Home
+export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-10.jdk/Contents/Home
+export CATALINA_HOME=/Library/Tomcat
+
+export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
+export ANDROID_NDK=/usr/logs-incal/opt/android-ndk
+export ANDROID_HOME=$ANDROID_SDK_ROOT
+
+export GRADLE_HOME=/usr/local/opt/gradle
+export GRADLE_OPTS="-Xmx1024M -Xms512M -XX:MaxPermSize=512M"
+
+export J2OBJC_ROOT=/usr/local/Cellar/j2objcDist
+export J2OBJC_HOME=$J2OBJC_ROOT/j2objc-1.2
+
