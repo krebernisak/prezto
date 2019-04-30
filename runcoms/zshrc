@@ -30,3 +30,6 @@ export GRADLE_OPTS="-Xmx1024M -Xms512M -XX:MaxPermSize=512M"
 export J2OBJC_ROOT=/usr/local/Cellar/j2objcDist
 export J2OBJC_HOME=$J2OBJC_ROOT/j2objc-1.2
 
+# Python Anaconda tools
+export PATH="/usr/local/anaconda3/bin:$PATH"
+
