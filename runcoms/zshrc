@@ -12,6 +12,14 @@ fi
 
 # Customize to your needs...
 
+# Configuring Homebrew Completions in zsh
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
+# Configure Custom (other sources) Completions in zsh
+fpath+=~/.zfunc
+
 # Init jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
@@ -31,6 +39,8 @@ export J2OBJC_ROOT=/usr/local/Cellar/j2objcDist
 export J2OBJC_HOME=$J2OBJC_ROOT/j2objc-1.2
 
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # BasicTex tools
 export PATH="/Library/TeX/texbin/:$PATH"
